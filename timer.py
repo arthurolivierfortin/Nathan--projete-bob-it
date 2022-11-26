@@ -1,18 +1,13 @@
-import asyncio
 import time
- 
-async def block(seconds):
-    start = time.time()
-    await asyncio.sleep(seconds)
-    elapsed = time.time() - start
-    print('blocked since', elapsed)
- 
-async def main():
-    t1 = asyncio.create_task(block(1))
-    t2 = asyncio.create_task(block(2))
-    start = time.time()
-    z = await asyncio.gather(t1, t2)
-    print('elapsed: ', time.time() - start)
-    return z
- 
-asyncio.run(main())
+
+def timer():
+    difficulté = int(input('choisi ta difficulté (1,2,3)'))
+    sec = 2
+    for i in range(sec):
+        if difficulté == 3:
+            if sec = 0:
+                return('game over')
+            print(f'{sec}')
+            time.sleep(1)
+            sec -= 1 
+timer()

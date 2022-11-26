@@ -5,9 +5,9 @@ def timer():
     sec = 2
     for i in range(sec):
         if difficulté == 3:
-            if sec = 0:
-                return('game over')
             print(f'{sec}')
             time.sleep(1)
             sec -= 1 
+            if sec == 0:
+                return('game over')
 timer()

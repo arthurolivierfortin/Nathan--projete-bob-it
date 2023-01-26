@@ -1,8 +1,4 @@
-import random
-from microbit import *
+class Memoire:
 
-def wait_for_button(bon_bouton, mauvais_button):
-    bon_bouton = False
-    mauvais_bouton = False
-
-    started = running_time()
+    def __init__(self, record):
+        self.record = record

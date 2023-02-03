@@ -10,7 +10,7 @@ plt.plot(data_in)
 plt.ylabel(soundfile)
 plt.show()
 
-import samplerate
+import sample_rate
 converter = 'sinc_best'  # or 'sinc_fastest', ...
 desired_sample_rate = 11000.0
 ratio = desired_sample_rate/datasamplerate

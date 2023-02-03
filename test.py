@@ -1,5 +1,17 @@
-from main.py import Memoire
+from main import Memoire
 
-class Bop_it():
+class Bop_it(Memoire):
 
-    def record()
+    def record(self):
+        self.record = 3
+        print(self.record)
+        return self.record
+        
+    def record2(self):
+        print(self.record)
+
+    
+
+Bop_it.record(Memoire)
+Bop_it.record2(Memoire)
+

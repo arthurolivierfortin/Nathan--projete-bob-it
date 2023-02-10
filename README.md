@@ -2,14 +2,16 @@
 
 Version raspberry pi:
 
-![image](https://user-images.githubusercontent.com/118319678/218150653-59304cc6-e387-4ce0-8fa1-5d7624e1955e.png)
+![image](https://user-images.githubusercontent.com/118319678/218153975-4bffff1d-e4f7-4bb1-8854-7e886c95d714.png)
+
 
 Reste a inclure les sons et a ameliorer la rapidite du jeu.
 Systeme de memoire pour les records permettant de garder les records apres la reinitialisation de l'appareil
 
 Version Arduino Uno (en construction)
 
-![image](https://user-images.githubusercontent.com/118319678/218150710-098b4b90-9af6-412d-9974-5c25284390aa.png)
+![image](https://user-images.githubusercontent.com/118319678/218154102-4142b31e-c478-45cc-ac6e-8aabe6c1adfe.png)
+
 
 Le code n'est pas complete mais je refait le jeu sur un arduino pour les meilleurs capacite a inclure des sons et comme le jeu est pour un ami aveugle,
 je veux lui donner le jeu complete le plus rapidement possible

@@ -4,9 +4,15 @@ Version raspberry pi:
 
 ![image](https://user-images.githubusercontent.com/118319678/218153975-4bffff1d-e4f7-4bb1-8854-7e886c95d714.png)
 
-
+Inclu:
+1un bouton pour demarrer la partie
+1 Systeme de memoire pour les records permettant de garder les records apres la reinitialisation de l'appareil
+3 Led qui s'allume pou indiquer le bouton sur lequel le joueur doit peser
+3 Bouton de jeu
+1 Systeme d'acceleration du laps de temps permit au cours du jeu
+1 Potentiometre pour test seulement du son
 Reste a inclure les sons et a ameliorer la rapidite du jeu.
-Systeme de memoire pour les records permettant de garder les records apres la reinitialisation de l'appareil
+
 
 Version Arduino Uno (en construction)
 

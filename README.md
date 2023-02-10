@@ -19,10 +19,12 @@ Version Arduino Uno (en construction)
 ![image](https://user-images.githubusercontent.com/118319678/218154102-4142b31e-c478-45cc-ac6e-8aabe6c1adfe.png)
 
 
-Le code n'est pas complete mais je refait le jeu sur un arduino pour les meilleurs capacite a inclure des sons et comme le jeu est pour un ami aveugle,
+Le code n'est pas complet mais je refait le jeu sur un arduino pour les meilleurs capacite a inclure des sons et comme le jeu est pour un ami aveugle,
 je veux lui donner le jeu complete le plus rapidement possible
 Cependant je suis entrain de travailler sur une librarie pour python pour transformer des WAV en donne PWM pour inclure plus facilement des sons sur 
 raspberry pi
+
+La boite du jeu sera modeliser et imprimer par mon imprimante 3D specifiquement pour les besoin de mon ami aveugle
 
 La version 2.0 du jeu inclura des sons stereo pour creer un effet 3D, le jeu sera donc plus immersif pour un aveugle.
 Il inclura aussi un systeme de machine learning avec trois camera sur raspberry pi pour reconnaitre les mouvements de mon ami.

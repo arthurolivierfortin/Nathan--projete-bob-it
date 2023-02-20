@@ -2,6 +2,7 @@ import wave
 import numpy as np
 
 def read_wav_file(filename):
+    liste=[]
     un_point = []
     with wave.open(filename, 'rb') as wav:
         n_channels = wav.getnchannels()
@@ -17,10 +18,15 @@ def read_wav_file(filename):
 
         #for i in range(len(audio_data)-1):
         #    un_point += [audio_data[i][0]]
-        audio_data_norme = (audio_data / np.iinfo(np.int8).max)
+        #print(np.iinfo(np.int8).max)
+        print(np.iinfo(np.int8).min)
+        
+        file = open('1point.txt', 'w')
         for i in range(len(audio_data)-1):
-            print(audio_data_norme[len(audio_data_norme)-i-1][0])
-        print(len(audio_data_norme))
+            #print((audio_data_norme[len(audio_data_norme)-i-1][0])
+            #print(int((audio_data[len(audio_data)-i-1][0])+128)*256)
+            file.write(f"{(((audio_data[len(audio_data)-i-1][0])+128)*256)}\n")
+        file.close()
         #print(audio_data / np.iinfo(np.int16).max)
         return audio_data
 

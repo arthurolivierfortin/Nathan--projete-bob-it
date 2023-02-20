@@ -25,7 +25,7 @@ def read_wav_file(filename):
         for i in range(len(audio_data)-1):
             #print((audio_data_norme[len(audio_data_norme)-i-1][0])
             #print(int((audio_data[len(audio_data)-i-1][0])+128)*256)
-            file.write(f"{(((audio_data[len(audio_data)-i-1][0])+128)*256)}\n")
+            file.write(f"{(((audio_data[len(audio_data)-i-1][0])+128)*256)}")
         file.close()
         #print(audio_data / np.iinfo(np.int16).max)
         return audio_data

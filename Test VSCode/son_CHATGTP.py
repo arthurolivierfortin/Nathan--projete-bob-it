@@ -32,3 +32,5 @@ def convert_to_pwm(audio_data, pin):
 
     for duty in pwm_duty:
         pwm.ChangeDutyCycle(duty)
+
+

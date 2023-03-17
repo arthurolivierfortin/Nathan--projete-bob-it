@@ -1,7 +1,7 @@
 import machine
 import utime
 import random
-from Memoire import Memoire
+from memoire import Memoire
 
 
 
@@ -10,14 +10,21 @@ debuter_partie11 = machine.Pin(11, machine.Pin.IN, machine.Pin.PULL_DOWN)
 led_raspberry25 = machine.Pin(25, machine.Pin.OUT) #led_raspberry pi
 led_raspberry25.value(1)
 debuter_partie11.value(0)
+bouton_pin15 = machine.Pin(15, machine.Pin.IN, machine.Pin.PULL_DOWN) #bouton pin
+bouton_pin14 = machine.Pin(14, machine.Pin.IN, machine.Pin.PULL_DOWN)
+bouton_pin13 = machine.Pin(13, machine.Pin.IN, machine.Pin.PULL_DOWN)
+lumiere_pin15 = machine.Pin(18, machine.Pin.OUT) #bouton pin
+lumiere_pin14 = machine.Pin(17, machine.Pin.OUT)
+lumiere_pin13 = machine.Pin(16, machine.Pin.OUT)
 
+led_pin12 = machine.Pin(12, machine.Pin.OUT) #led_pin12
 
 while True:
     if dicti["debut"] == True: 
         while dicti["gameover"] == False:
             def hasard(dicti):
                 led_pin12 = machine.Pin(12, machine.Pin.OUT)
-                led_pin12.value(1) #led indiquant qu<une partie est en jeu
+                led_pin12.value(1) #led indiquant qu'une partie est en jeu
                 
                 pin = ['pin13', 'pin14', 'pin15']
                 import random
@@ -26,16 +33,7 @@ while True:
 
                 
             def timer(dicti):
-                lumiere_pin15 = machine.Pin(18, machine.Pin.OUT) #bouton pin
-                lumiere_pin14 = machine.Pin(17, machine.Pin.OUT)
-                lumiere_pin13 = machine.Pin(16, machine.Pin.OUT)
-                bouton_pin15 = machine.Pin(15, machine.Pin.IN, machine.Pin.PULL_DOWN) #bouton pin
-                bouton_pin14 = machine.Pin(14, machine.Pin.IN, machine.Pin.PULL_DOWN)
-                bouton_pin13 = machine.Pin(13, machine.Pin.IN, machine.Pin.PULL_DOWN)
-                led_pin12 = machine.Pin(12, machine.Pin.OUT) #led_pin12
-                 #led_raspberry pi
 
-                arret = False
                 sec = 3
                 
                 utime.sleep(1)
@@ -44,7 +42,7 @@ while True:
                 print(no_pin)
                 machine.Pin(no_pin, machine.Pin.OUT).value(1)
                 
-                while sec > 0 and arret != True:
+                while sec > 0:
                     if bouton_pin15.value() or bouton_pin14.value() or bouton_pin13.value():
                         if bouton_pin15.value():
                             led_pin12.value(0) # 1 pour que la lumiere s'allume)
@@ -53,33 +51,33 @@ while True:
                             utime.sleep(0.25)
                             dicti["pin"] = "pin15"
                             machine.Pin(no_pin, machine.Pin.OUT).value(0)
-                            arret = True
+                            break
 
                         
                         if bouton_pin14.value():
-                            led_pin12.value(0.25) # 1 pour que la lumiere s'allume)
+                            led_pin12.value(0) # 1 pour que la lumiere s'allume)
                             
                             print('x')
-                            utime.sleep(1)
+                            utime.sleep(0.25)
                             dicti["pin"] = "pin14"
                             machine.Pin(no_pin, machine.Pin.OUT).value(0)
-                            arret = True
+                            break
 
                         
                         if bouton_pin13.value():
-                            led_pin12.value(0.25) # 1 pour que la lumiere s'allume)
+                            led_pin12.value(0) # 1 pour que la lumiere s'allume)
                             
                             print('x')
-                            utime.sleep(1)
+                            utime.sleep(0.25)
                             dicti["pin"] = "pin13"
                             machine.Pin(no_pin, machine.Pin.OUT).value(0)
-                            arret = True
+                            break
 
                     else:
                         
-                        print(sec)
-                        utime.sleep(0.25)
-                        sec -= (0.25 + (0.01*int(dicti["score"])))
+                        #print(sec)
+                        utime.sleep(0.01)
+                        sec -= (0.01 + (0.001*int(dicti["score"])))
                     
 
                 led_pin12.value(0) # 1 pour que la lumiere s'allume)
@@ -95,6 +93,7 @@ while True:
                         print(f"NOUVEAU RECORD : {dicti["record"]}")
                     dicti["score"] = 0
                     led_off()
+
 
             def correction(dict):
                 if dicti["reponse"] == dicti["pin"]:
@@ -136,7 +135,7 @@ while True:
                     print("%%%")
                     dicti["debut"] = True
                     arret = True
-                utime.sleep(0.5)
+                    utime.sleep(0.25)
             depart = False
             
 
